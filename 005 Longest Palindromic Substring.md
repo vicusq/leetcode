@@ -26,7 +26,11 @@ class Solution {
 
         for ($i = 0; $i <= $str_len; $i++) {
             $sub_len = $str_len - $i;
+            if (strlen($result_str) > $str_len) break;
+
             for ($j = $sub_len; $j >= 1; $j--) {
+                if (strlen($result_str) > $j) break;
+
                 $temp_str = substr($s, $i, $j);
                 $temp_str_rev = strrev($temp_str);
                 if ($temp_str == $temp_str_rev) {
