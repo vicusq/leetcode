@@ -52,20 +52,10 @@ class Solution {
      * @return Boolean
      */
     function isSameTree($p, $q) {
-        if ($p === null) {
-            if ($q !== null) {
-                return false;
-            } else return true;
+        if ($p === null || $q === null) {
+            return $p === $q;
         }
-        
-        if ($q === null) {
-            if ($p !== null) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-        
+
         if ($p->val === $q->val) {
             return $this->isSameTree($p->left, $q->left) && $this->isSameTree($p->right, $q->right);
         }
