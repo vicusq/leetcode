@@ -50,6 +50,7 @@ class Solution {
             if ($node0 === null || $node1 === null) {
                 if ($node0 !== $node1) return false;
                 unset($nodes[$i], $nodes[$count - 1 - $i]);
+                continue;
             }
             
             if ($node0->val !== $node1->val) return false;
