@@ -72,10 +72,9 @@ class Solution {
         $nodes = $current_level;
         if ($have_next) {
             $this->level_order_bottom($nodes, $result);
-            if ($val_array) $result[] = $val_array;
-        } else {
-            if ($val_array) $result[] = $val_array;
         }
+        
+        if ($val_array) $result[] = $val_array;
     }
 }
 ~~~
