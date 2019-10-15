@@ -1,4 +1,4 @@
-# LeetCode
+# LeetCode Solutions in PHP
 
-LeetCode Problems https://leetcode.com/problemset/all/
+LeetCode Problems https://leetcode.com/problemset/all
 
