@@ -15,20 +15,20 @@ Output: 1->1->2->3->4->4
  * }
  */
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-    if l1 == nil {
+	if l1 == nil {
 		return l2
 	}
 	if l2 == nil {
 		return l1
 	}
-	
+
 	var head, current *ListNode
 
 	if l1.Val <= l2.Val {
-		head = l1;
+		head = l1
 		l1 = l1.Next
 	} else {
-		head = l2;
+		head = l2
 		l2 = l2.Next
 	}
 
@@ -37,13 +37,13 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	for {
 		if l1 == nil {
 			current.Next = l2
-			break;
+			break
 		}
 		if  l2 == nil {
 			current.Next = l1
-			break;
+			break
 		}
-		
+
 		if l1.Val <= l2.Val {
 			current.Next = l1
 			l1 = l1.Next
